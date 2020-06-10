@@ -24,6 +24,12 @@ mongoose
     )
     .then(() => console.log("MongoDB successfully connected"))
     .catch(err => console.log(err));
+//importing the required controller
+const firstblog = require('./controller/firstblog.controller.js');
+//to get the firstblog data
+app.get('/blognp', firstblog.findAll);
+// to post the data into the firstblog
+app.post('/blognp', firstblog.create);
 
 const port = process.env.PORT || 5000;
 
