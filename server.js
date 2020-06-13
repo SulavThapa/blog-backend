@@ -30,6 +30,10 @@ const firstblog = require('./controller/firstblog.controller.js');
 app.get('/blognp', firstblog.findAll);
 // to post the data into the firstblog
 app.post('/blognp', firstblog.create);
+//to delete the data into the firstblog
+app.delete('/blognp'. firstblog.delete);
+//to update the data into the firstblog
+app.update('/blognp'. firstblog.update);
 
 const port = process.env.PORT || 5000;
 
